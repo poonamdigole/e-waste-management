@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Signup.css';
 import { Link } from 'react-router-dom';
+import Navbar from '../../components/Navbar/Navbar';
 
 function Signup() {
   const [name, setName] = useState('');
@@ -28,6 +29,7 @@ function Signup() {
 
   return (
     <div>
+       <Navbar />
       <form className="signup-form">
         <h1 className='text-center'>Signup</h1>
 

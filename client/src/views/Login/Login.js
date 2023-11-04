@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import "./Login.css";
 import { Link } from "react-router-dom"
+import Navbar from '../../components/Navbar/Navbar';
 
 
 function Login() {
@@ -20,6 +21,7 @@ function Login() {
 
   return (
     <div>
+       <Navbar />
       <form className="login-form">
         <h1 className='text-center'>Login</h1>
 
