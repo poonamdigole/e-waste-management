@@ -13,7 +13,7 @@ function Navbar() {
   return (
     <div className="navbar">
       <Link to="/" className="navbar-brand">
-        E-waste
+        🗑️E-waste
       </Link>
 
       <div className='navbar-links-container'>

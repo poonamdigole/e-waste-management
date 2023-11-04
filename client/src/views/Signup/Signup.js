@@ -29,6 +29,7 @@ function Signup() {
   };
 
   return (
+    <>
     <div>
        <Navbar />
       <form className="signup-form">
@@ -124,8 +125,9 @@ function Signup() {
           <Link to="/login">Already have an account?</Link>
         </p>
       </form>
-      <Footer />
     </div>
+    <Footer />
+    </>
   );
 }
 
