@@ -1,14 +1,22 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
+import {createBrowserRouter, RouterProvider} from 'react-router-dom';
+import Login from './views/Login/Login';
+import Signup from './views/Signup/Signup';
 import './index.css';
-import App from './App';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const router = createBrowserRouter([
+  {
+    path: '/login',
+    element: <Login />
+  },
+  {
+    path: '/signup',
+    element: <Signup />
+  },
+])
+
+root.render(<RouterProvider router={router} />);
 
 
