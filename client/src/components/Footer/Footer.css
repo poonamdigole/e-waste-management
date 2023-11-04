@@ -1,0 +1,38 @@
+.footer-container{
+    background-color: #00baf2;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;   
+    justify-content: space-around;
+    align-items: center;
+    height: 30px;
+    margin-top: 30px;
+    border-bottom: 7px solid #002970;
+}
+
+
+.footer-text{
+    font-size: 20px;
+}
+
+.footer-hyper-link{
+   text-decoration: none;
+   color: white;
+}
+
+
+@media screen and (max-width:900px){
+    .footer-container{
+        flex-direction: column;
+        border-bottom: 3px solid #002970;
+        min-height: 50px;
+        position: relative;
+
+    }
+    .footer-text{
+        font-size: 15px;
+    }
+}
+    

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Signup.css';
 import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer';
 
 function Signup() {
   const [name, setName] = useState('');
@@ -123,6 +124,7 @@ function Signup() {
           <Link to="/login">Already have an account?</Link>
         </p>
       </form>
+      <Footer />
     </div>
   );
 }
