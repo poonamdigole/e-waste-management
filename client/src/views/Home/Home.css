@@ -44,7 +44,6 @@
     cursor: pointer;
   }
   
-
   .right-arrow:hover{
     transform: translateX(5px);
     transition: 0.3s;
