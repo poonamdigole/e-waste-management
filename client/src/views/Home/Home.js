@@ -2,13 +2,15 @@ import React from 'react'
 import'./Home.css'
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
-import Manufacture from "./Images/manufacturer.png"
-import Consumers from "./Images/consumers.png";
-import Wastebin from "./Images/waste-bin.png";
-import Wastecollection from "./Images/waste-collection.png";
-import Contractors from "./Images/contractors.png";
-import Wasterecycling from "./Images/waste-recycling.png";
-import Datadestruction from "./Images/data-destruction.png";
+import manufacture from "./Images/manufacturer.png"
+import consumers from "./Images/consumers.png";
+import wasteBin from "./Images/waste-bin.png";
+import wasteCollection from "./Images/waste-collection.png";
+import contractors from "./Images/contractors.png";
+import wasteRecycling from "./Images/waste-recycling.png";
+import dataDestruction from "./Images/data-destruction.png";
+import rightArrow from "./Images/right-arrow.png";
+
 
 
 
@@ -22,24 +24,30 @@ function Home() {
 
         <div className='container'>
          <div className='feature-card'>
-         <img src={ Manufacture}  className="img-manufacturer" alt="manufacturer"/>
+         <img src={ manufacture}  className="img-manufacturer" alt="manufacturer"/>
          <h3 className='title'>Manufacturer</h3>
-         </div>
+         <img src={rightArrow} className='right-arrow' alt="arrow"/>
+         </div> 
 
          <div className='feature-card'>
-         <img src={ Manufacture}  className="img-manufacturer" alt="manufacturer"/>
+         <img src={ manufacture}  className="img-manufacturer" alt="manufacturer"/>
          <h3 className='title'>Retailers</h3>
+         <img src={rightArrow} className='right-arrow' alt="arrow"/>
          </div>
 
          <div className='feature-card'>
-         <img src={ Consumers}  className="img-manufacturer" alt="consumers"/>
+         <img src={ consumers}  className="img-manufacturer" alt="consumers"/>
          <h3 className='title'>Consumers</h3>
+         <img src={rightArrow} className='right-arrow' alt="arrow"/>
          </div>
 
          <div className='feature-card'>
-         <img src={Wastebin}  className="img-manufacturer" alt="waste-bin"/>
-         <h3 className='title'>Smart Waste Bins</h3>
+         <img src={contractors}  className="img-manufacturer" alt="contractors"/>
+         <h3 className='title'>Contractors</h3>
+         <img src={rightArrow} className='right-arrow' alt="arrow"/>
          </div>
+
+        
         </div>
         </div>
     </div>
@@ -47,23 +55,27 @@ function Home() {
         <div>
         <div className='container'>
          <div className='feature-card'>
-         <img src={Wastecollection}  className="img-manufacturer" alt="waste-collection"/>
+         <img src={wasteCollection}  className="img-manufacturer" alt="waste-collection"/>
          <h3 className='title'>Waste Collection Center</h3>
+         <img src={rightArrow} className='right-arrow' alt="arrow"/>
          </div>
 
          <div className='feature-card'>
-         <img src={Contractors}  className="img-manufacturer" alt="contractors"/>
-         <h3 className='title'>Contractors</h3>
+         <img src={wasteBin}  className="img-manufacturer" alt="waste-bin"/>
+         <h3 className='title'>Smart <br /> Waste Bins</h3>
+         <img src={rightArrow} className='right-arrow' alt="arrow"/>
          </div>
 
          <div className='feature-card'>
-         <img src={Wasterecycling}  className="img-manufacturer" alt="waste recycling plant"/>
+         <img src={wasteRecycling}  className="img-manufacturer" alt="waste recycling plant"/>
          <h3 className='title'>Waste Recycling Plant</h3>
+         <img src={rightArrow} className='right-arrow' alt="arrow"/>
          </div>
 
          <div className='feature-card'>
-         <img src={Datadestruction}  className="img-manufacturer" alt="data-destruction-unit"/>
+         <img src={dataDestruction}  className="img-manufacturer" alt="data-destruction-unit"/>
          <h3 className='title'>Data Destruction Unit</h3>
+         <img src={rightArrow} className='right-arrow' alt="arrow"/>
          </div>
 
         </div>
