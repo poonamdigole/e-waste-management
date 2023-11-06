@@ -1,0 +1,41 @@
+/* SmartWasteBins.css */
+
+.smart-waste-bins {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .ferrous-bin, .non-ferrous-bin {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    margin-top: 120px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #666;
+    margin: 10px 0;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 5px 0;
+  }
+  
+  /* Customize and expand your CSS as needed for your specific design */
+  
