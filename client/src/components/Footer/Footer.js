@@ -9,7 +9,7 @@ function Footer() {
     return (
         <div className='footer-container'>
 
-            <div className='footer-text'>
+            <div className='text-footer'>
                 Developed By <a>Vaishnavi Hole</a>
             </div>
             <div>
