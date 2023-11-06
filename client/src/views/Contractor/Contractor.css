@@ -1,0 +1,46 @@
+.container{
+    display: flex;
+}
+
+.contractor-card {
+    display: inline-block;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center;
+    transition: transform 0.2s;
+  }
+
+  .contractor-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s;
+  }
+
+  .area-name {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+  }
+
+  .contact-now{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .contact-now:hover {
+    background-color: #0056b3;
+  }
+  
+
