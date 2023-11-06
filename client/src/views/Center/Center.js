@@ -20,7 +20,7 @@ function Center() {
         </div>
       </div>
 
-       <div className='feature-card'>
+       <div className='location-card'>
         <img src={location}  className="img-location" alt="location"/> 
          <h3 className='title'>Location: Pune</h3>
          </div>

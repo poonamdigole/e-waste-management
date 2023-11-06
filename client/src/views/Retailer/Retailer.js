@@ -16,8 +16,8 @@ function Retailers() {
           <h4 className='shop-name'>Om Electronics</h4>
           <div className='product-details'>
             <span>Product Name: Fan</span>
-            <span>Total Amount: ₹2000</span>
-            <span>Quantity: 1</span>
+            <span>Total Amount: ₹10000</span>
+            <span>Quantity: 5</span>
           </div>
           <img src={fan} className="product-image" alt="fan" />
          <div>
@@ -42,8 +42,8 @@ function Retailers() {
           <h4 className='shop-name'>Sai Electronics</h4>
           <div className='product-details'>
             <span>Product Name: Blub</span>
-            <span>Total Amount:₹450</span>
-            <span>Quantity: 1</span>
+            <span>Total Amount:₹2,250</span>
+            <span>Quantity: 5</span>
           </div>
           <img src={bulb} className="product-image" alt="bulb" />
           <div>

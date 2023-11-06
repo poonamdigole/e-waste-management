@@ -55,12 +55,12 @@
     margin-right: auto;
 }
 
-.feature-card {
+.location-card {
     width: 150px;
     border: 1px solid #ccc;
     padding: 5px;
     border-radius: 5px;
-    margin-left: 500px;
+    margin-left: 520px;
     margin-top: 50px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
     background: #fff;
