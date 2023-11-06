@@ -3,7 +3,7 @@ import'./Home.css'
 import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
-import manufacture from "./Images/manufacturer.png"
+import manufacture from "./Images/manufacturer.png";
 import consumers from "./Images/consumers.png";
 import wasteBin from "./Images/waste-bin.png";
 import wasteCollection from "./Images/waste-collection.png";
@@ -11,9 +11,7 @@ import contractors from "./Images/contractors.png";
 import wasteRecycling from "./Images/waste-recycling.png";
 import dataDestruction from "./Images/data-destruction.png";
 import rightArrow from "./Images/right-arrow.png";
-
-
-
+import retailers from './Images/retailers.png';
 
 function Home() {
   return (
@@ -31,7 +29,7 @@ function Home() {
          </div> 
 
          <div className='feature-card'>
-         <img src={ manufacture}  className="img-manufacturer" alt="manufacturer"/>
+         <img src={ retailers}  className="img-manufacturer" alt="retailers"/>
          <h3 className='title'>Retailers</h3>
          <Link to='/retailer'><img src={rightArrow} className='right-arrow' alt="arrow"/></Link>
          </div>
