@@ -50,7 +50,8 @@ function Retailers() {
          <button className='place-order'>Place Order</button>
          </div>
         </div>
-        <button type='button' className='navigate-btn'><Link className='order-product' to="/manufacturer">Go Order Product</Link></button>
+        <button type='button' className='navigate-btn'><Link className='order-product' to="/manufacturer">
+        Order Product Now</Link></button>
  </div>
       <Footer />
     </>
