@@ -43,6 +43,7 @@ app.post('/signup', async (req, res) => {
 app.post('/login',async(req,res)=>{
 
     const{  email,password}=req.body;
+    
 
     const loginUser = await User.findOne({email:email ,password:password}).select('name gmail roll address')
 
