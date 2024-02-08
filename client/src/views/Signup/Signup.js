@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Signup.css';
+import axios from 'axios'
 import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
@@ -10,25 +11,49 @@ function Signup() {
   const [password, setPassword] = useState('');
   const [mobile, setMobile] = useState('');
   const [address, setAddress] = useState('');
-  const [roll, setRoll] = useState('');
+  let [roll, setRoll] = useState('');
  
   
-  const handleSubmit = () => {
-    // Create an object to store the user information
-    const user = {
-      name,
-      email,
-      password,
-      mobile,
-      address,
-      roll,
+  const signup= async ()=>{
+    if (!name){
+        alert('Name is required');
+        return;
+    }
+    if (!email){
+        alert('Email is required');
+        return;
+    }
+    if (!password){
+        alert('Password is required');
+        return;
+    }
+    if (!mobile){
+        alert('Mobile is required');
+        return;
+    }
+    if (!address){
+        alert('Address is required');
+        return;
+    }
+
+    const response =await axios.post("/signup",{
+            name:name,
+            email:email,
+            password:password,
+            mobile:mobile,
+            address:address,
+            roll:roll
+        })
+        if (response?.data?.success){
+            alert(response?.data?.message);
+            window.location.href="/login";
+        }else{
+            alert(response?.data?.message);
+        }
     };
-
-    // Convert the user object to a JSON string and store it in localStorage
-    localStorage.setItem('user', JSON.stringify(user));
-  };
-
   return (
+
+
     <>
     <div>
        <Navbar />
@@ -104,20 +129,22 @@ function Signup() {
         </div>
 
         <div>
-          <label htmlFor="roll">Roll</label>
-          <input
-            type="text"
-            placeholder="Enter your roll"
-            id="roll"
-            className="form-control"
-            value={roll}
-            onChange={(e) => {
-              setRoll(e.target.value);
-            }}
-          />
-        </div>
+      <label htmlFor="roll">Roll</label>
+      <select
+        className='form-control'
+        value={roll}
+        onChange={(e) => {
+          setRoll(e.target.value); // Corrected assignment
+        }}
+      >
+        <option value="Manufacturer">Manufacturer</option>
+        <option value="Retailers">Retailers</option>
+        <option value="Consumers">Consumers</option>
+        <option value="Contractors">Contractors</option>
+      </select>
+    </div>
 
-        <button type="button" className="btn signup-btn" onClick={handleSubmit}>
+        <button type="button" className="btn signup-btn" onClick={signup}>
           Signup
         </button>
 

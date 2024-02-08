@@ -24,6 +24,23 @@ function Navbar() {
           Signup
         </Link>
       </div>
+      <div>
+
+        <span className='text-light fs-5'>Hello 👋,{user?.name || 'user'}</span>
+
+
+        {
+          user?.name ? (
+            <span className='text-light fs-5 ms-3 curser-pointer' onClick={() => {
+              localStorage.removeItem('user')
+              window.location.href = '/login'
+            }}> Logout </span>
+
+          ) : null
+        }
+
+
+      </div>
     </div>
   )
 }

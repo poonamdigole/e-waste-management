@@ -6,6 +6,7 @@ import fan from './../Manufacturer/Images/fan.png';
 import induction from "./../Manufacturer/Images/induction-stove.png";
 import bulb from "./../Manufacturer/Images/bulb.png";
 
+
 function Consumers() {
   return (
     <div>
@@ -32,7 +33,7 @@ function Consumers() {
             <div className='product-details'>
               <span>Product Name: Induction</span>
               <span>Total Amount:₹3500</span>
-              <span>Quantity: </span>
+              <span>Quantity: 1</span>
             </div>
             <img src={induction} className="product-image" alt="induction" />
             <div>
@@ -46,6 +47,31 @@ function Consumers() {
               <span>Product Name: Blub</span>
               <span>Total Amount:₹450</span>
               <span>Quantity: 1</span>
+            </div>
+            <img src={bulb} className="product-image" alt="bulb" />
+            <div>
+              <button className='place-order'>Place Order</button>
+            </div>
+          
+          </div>
+          <div className='product-card'>
+            <h4 className='shop-name'>Vivek Jadhav</h4>
+            <div className='product-details'>
+              <span>Product Name: Fan</span>
+              <span>Total Amount:₹4000</span>
+              <span>Quantity: 2</span>
+            </div>
+            <img src={fan} className="product-image" alt="bulb" />
+            <div>
+              <button className='place-order'>Place Order</button>
+            </div>
+          </div>
+          <div className='product-card'>
+            <h4 className='shop-name'>Om patil</h4>
+            <div className='product-details'>
+              <span>Product Name: Bulb</span>
+              <span>Total Amount:₹800 </span>
+              <span>Quantity: 2</span>
             </div>
             <img src={bulb} className="product-image" alt="bulb" />
             <div>
