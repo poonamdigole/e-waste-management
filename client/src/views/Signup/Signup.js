@@ -11,7 +11,7 @@ function Signup() {
   const [password, setPassword] = useState('');
   const [mobile, setMobile] = useState('');
   const [address, setAddress] = useState('');
-  const [roll, setRoll] = useState('');
+  let [roll, setRoll] = useState('');
  
   
   const signup= async ()=>{
@@ -129,18 +129,20 @@ function Signup() {
         </div>
 
         <div>
-          <label htmlFor="roll" >Roll</label>
-          <select className='form-control'
-          value={roll}
-          onChange={(e)=>{
-            setRoll=(e.target.value);
-          }}>
-            <option value="Manufacturer">Manufacturer</option>
-            <option value="Retailers">Retailers</option>
-            <option value="Consumers">Consumers</option>
-            <option value="Contractors">Contractors</option>
-          </select>
-        </div>
+      <label htmlFor="roll">Roll</label>
+      <select
+        className='form-control'
+        value={roll}
+        onChange={(e) => {
+          setRoll(e.target.value); // Corrected assignment
+        }}
+      >
+        <option value="Manufacturer">Manufacturer</option>
+        <option value="Retailers">Retailers</option>
+        <option value="Consumers">Consumers</option>
+        <option value="Contractors">Contractors</option>
+      </select>
+    </div>
 
         <button type="button" className="btn signup-btn" onClick={signup}>
           Signup
