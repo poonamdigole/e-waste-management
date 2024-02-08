@@ -138,6 +138,7 @@ function Signup() {
         }}
       >
         <option value="Manufacturer">Manufacturer</option>
+        <option value="Manufacturer">Manufacturer</option>
         <option value="Retailers">Retailers</option>
         <option value="Consumers">Consumers</option>
         <option value="Contractors">Contractors</option>

@@ -66,6 +66,13 @@ app.post('/login',async(req,res)=>{
 
    }
 })
+app.get('/login',async (req,res)=>{
+    const alluser = await User.find();
+    res.json({
+      data:alluser,
+      message: "feached all user"
+    })
+  })
 const PORT = process.env.PORT || 5000;
 
 const connectDB = async () => {
