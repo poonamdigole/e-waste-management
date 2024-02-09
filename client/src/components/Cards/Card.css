@@ -1,0 +1,100 @@
+.contact-page-cardcard {
+  margin-top: -90px;
+  width: 340px;
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+  height: 300px;
+  border-radius: 5px;
+  backdrop-filter: blur(14px);
+  background-color: rgba(0, 0, 0, 0.337);
+  padding: 10px;
+  text-align: center;
+}
+.contact-page-card:hover {
+  border: 1px solid red;
+  transition: 0.5s;
+}
+.img-contact {
+  height: 100px;
+  margin-top: 20px;
+  background: none;
+}
+.card-headding {
+  color: aliceblue;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-top: 15px;
+  background: none;
+}
+.card-text {
+  color: aliceblue;
+  font-size: 18px;
+  margin-top: 20px;
+  background: none;
+}
+
+.home-page-card {
+  height: 280px;
+  width: 600px;
+  background-color: rgb(53, 51, 51);
+  border-radius: 0px;
+  margin-top: 150px;
+  border: 1px solid rgb(63, 7, 7);
+}
+.home-page-card:hover {
+  border: 1px solid red;
+  transition: 1s;
+}
+.review-card-heading {
+  color: white;
+  background: none;
+  font-size: 30px;
+  margin: 20px;
+}
+.review-card-name {
+  color: rgb(102, 97, 97);
+  background: none;
+  margin-left: 20px;
+  margin-top: -10px;
+  font-size: 20px;
+}
+.home-card-texr {
+  background: none;
+  color: white;
+  margin-left: 20px;
+  font-size: 20px;
+}
+.contact-page-card1 {
+  margin-top: -90px;
+  width: 400px;
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+  height: 460px;
+  border-radius: 5px;
+  backdrop-filter: blur(14px);
+  background-color: rgba(0, 0, 0, 0.337);
+  padding: 10px;
+  text-align: center;
+  background-color: white;
+}
+.img-breakfast {
+  width: 390px;
+  height: 350px;
+  margin-left: -5px;
+}
+.custumheadding {
+  font-size: 40px;
+  background: none;
+  margin-top: 19px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+@media only screen and (max-width: 365px) {
+  .contact-page-card {
+    margin-top: -90px;
+    width: 100px;
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+    height: 290px;
+    border-radius: 5px;
+    backdrop-filter: blur(14px);
+    background-color: rgba(0, 0, 0, 0.337);
+    padding: 10px;
+    text-align: center;
+  }
+}

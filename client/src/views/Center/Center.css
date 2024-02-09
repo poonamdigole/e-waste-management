@@ -56,12 +56,25 @@
 }
 
 .location-card {
-    width: 150px;
-    border: 1px solid #ccc;
-    padding: 5px;
-    border-radius: 5px;
-    margin-left: 520px;
-    margin-top: 50px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-    background: #fff;
+    margin-left: 50px;
+    margin-top: 100px;
+}
+.google-map{  
+    margin-top: 30px; 
+    display: flex;
+    gap:80px;
+}
+.contact-map{
+    height: 400px;
+    width: 60rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px;
+}
+.contact-card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 150px;
+    color: black;
 }

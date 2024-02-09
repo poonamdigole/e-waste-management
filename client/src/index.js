@@ -12,6 +12,7 @@ import Center from './views/Center/Center';
 import WasteBin from './views/WasteBin/WasteBin';
 import RecyclingPlant from './views/RecyclingPlant/RecyclingPlant';
 import DataUnit from './views/DataUnit/DataUnit';
+import ContactCard from './views/ContactCard/ContactCard';
  
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
     path: '/dataUnit',
     element: <DataUnit/>
   },
+  {
+    path:'/contactcard',
+    element:<ContactCard/>
+  }
 ])
 
 root.render(<RouterProvider router={router} />);
