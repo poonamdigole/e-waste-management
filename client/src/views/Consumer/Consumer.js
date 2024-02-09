@@ -8,6 +8,11 @@ import bulb from "./../Manufacturer/Images/bulb.png";
 
 
 function Consumers() {
+  const Buynow=  ()=>{
+    {
+        alert('Your Order will be Place successfully🎉✨');
+        return;
+    }}
   return (
     <div>
       <>
@@ -23,7 +28,7 @@ function Consumers() {
               </div>
               <img src={fan} className="product-image" alt="fan" />
               <div>
-                <button className='place-order'>Place Order</button>
+                <button className='place-order'onClick={Buynow}>Place Order</button>
               </div>
             </div>
           </div>
@@ -37,7 +42,7 @@ function Consumers() {
             </div>
             <img src={induction} className="product-image" alt="induction" />
             <div>
-              <button className='place-order'>Place Order</button>
+              <button className='place-order'onClick={Buynow}>Place Order</button>
             </div>
           </div>
 
@@ -50,7 +55,7 @@ function Consumers() {
             </div>
             <img src={bulb} className="product-image" alt="bulb" />
             <div>
-              <button className='place-order'>Place Order</button>
+              <button className='place-order'onClick={Buynow}>Place Order</button>
             </div>
           
           </div>
@@ -63,7 +68,7 @@ function Consumers() {
             </div>
             <img src={fan} className="product-image" alt="bulb" />
             <div>
-              <button className='place-order'>Place Order</button>
+              <button className='place-order'onClick={Buynow}>Place Order</button>
             </div>
           </div>
           <div className='product-card'>
@@ -75,7 +80,7 @@ function Consumers() {
             </div>
             <img src={bulb} className="product-image" alt="bulb" />
             <div>
-              <button className='place-order'>Place Order</button>
+              <button className='place-order'onClick={Buynow}>Place Order</button>
             </div>
           </div>
         </div>
