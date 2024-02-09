@@ -12,7 +12,7 @@ import induction from "./Images/induction-stove.png";
 function Manufacturer() {
   const Buynow=  ()=>{
     {
-        alert('Your Order will be Place successfully');
+        alert('Your Order will be Place successfully✨🎇🎉');
         return;
     }}
   return (
