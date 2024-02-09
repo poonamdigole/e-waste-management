@@ -10,6 +10,11 @@ import mobile from "./Images/mobile-phone.png";
 import induction from "./Images/induction-stove.png";
 
 function Manufacturer() {
+  const Buynow=  ()=>{
+    {
+        alert('Your Order will be Place successfully');
+        return;
+    }}
   return (
     <>
       <Navbar />
@@ -22,7 +27,7 @@ function Manufacturer() {
             A bulb is the glass part of an
             electric lamp,which gives out
             light when electricity passes through it.</p>
-          <button className='product-card-button'>Buy Now</button>
+          <button className='product-card-button' onClick={Buynow}>Buy Now</button>
         </div>
 
         <div className="product-card">
@@ -35,7 +40,7 @@ function Manufacturer() {
             plug-and-play portable storage device
             that uses flash memory and is lightweight
             enough to attach to a keychain.</p>
-          <button className='product-card-button'>Buy Now</button>
+          <button className='product-card-button' onClick={Buynow}>Buy Now</button>
         </div>
 
         <div className="product-card">
@@ -47,7 +52,7 @@ function Manufacturer() {
           lead (UK) is a length of flexible electrical power cable (flex) with 
           a plug on one end and one or more sockets on the other end 
           (usually of the same type as the plug).</p>
-          <button className='product-card-button'>Buy Now</button>
+          <button className='product-card-button' onClick={Buynow}>Buy Now</button>
         </div>
 
         <div className="product-card">
@@ -59,7 +64,7 @@ function Manufacturer() {
           ceiling of your room, 
           runs on electricity and uses rotating 
           blades which cuts the air to produce airflow. </p>
-          <button className='product-card-button'>Buy Now</button>
+          <button className='product-card-button' onClick={Buynow}>Buy Now</button>
         </div>
 
         <div className="product-card">
@@ -70,7 +75,7 @@ function Manufacturer() {
           Mobile devices may also include voice communication capabilities, 
           on-board sensors that allow the devices to capture information, 
           or built-in features that synchronize local data with remote locations.</p>
-          <button className='product-card-button'>Buy Now</button>
+          <button className='product-card-button' onClick={Buynow}>Buy Now</button>
         </div>
 
         <div className="product-card">
@@ -83,7 +88,7 @@ function Manufacturer() {
           field keeps varying or magnetic field is stationary
           and a conductor is moving.
           </p>
-          <button className='product-card-button'>Buy Now</button>
+          <button className='product-card-button' onClick={Buynow}>Buy Now</button>
         </div>
         <Footer />
       </div>

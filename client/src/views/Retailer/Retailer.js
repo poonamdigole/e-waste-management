@@ -11,6 +11,11 @@ import flash from "./../Manufacturer/Images/flash-drive.png"
 import { Link } from 'react-router-dom';
 
 function Retailers() {
+  const Buynow=  ()=>{
+    {
+        alert('Your Order will be Place successfully');
+        return;
+    }}
   return (
     <>
       <Navbar />
@@ -24,7 +29,7 @@ function Retailers() {
           </div>
           <img src={fan} className="product-image" alt="fan" />
          <div>
-         <button className='place-order'>Place Order</button>
+         <button className='place-order' onClick={Buynow}>Place Order</button>
          </div>
         </div>
     
@@ -37,7 +42,7 @@ function Retailers() {
           </div>
           <img src={induction} className="product-image" alt="induction" />
           <div>
-         <button className='place-order'>Place Order</button>
+         <button className='place-order'onClick={Buynow}>Place Order</button>
          </div>
         </div>
 
@@ -50,7 +55,7 @@ function Retailers() {
           </div>
           <img src={bulb} className="product-image" alt="bulb" />
           <div>
-         <button className='place-order'>Place Order</button>
+         <button className='place-order'onClick={Buynow}>Place Order</button>
          </div>
         </div>
         <div className='product-card'>
@@ -62,7 +67,7 @@ function Retailers() {
           </div>
           <img src={extension} className="product-image" alt="bulb" />
           <div>
-         <button className='place-order'>Place Order</button>
+         <button className='place-order'onClick={Buynow}>Place Order</button>
          </div>
         </div>
         <div className='product-card'>
@@ -74,7 +79,7 @@ function Retailers() {
           </div>
           <img src={mobile} className="product-image" alt="bulb" />
           <div>
-         <button className='place-order'>Place Order</button>
+         <button className='place-order'onClick={Buynow}>Place Order</button>
          </div>
         </div>
         <div className='product-card'>
@@ -86,7 +91,7 @@ function Retailers() {
           </div>
           <img src={flash} className="product-image" alt="bulb" />
           <div>
-         <button className='place-order'>Place Order</button>
+         <button className='place-order'onClick={Buynow}>Place Order</button>
          </div>
         </div>
         <button type='button' className='navigate-btn'><Link className='order-product' to="/manufacturer">
