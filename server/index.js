@@ -47,7 +47,7 @@ app.post("/login", async (req, res) => {
     password: password,
   }).select("name gmail roll address");
 
-<<<<<<< HEAD
+
   if (loginUser) {
     return res.json({
       success: true,
@@ -61,11 +61,7 @@ app.post("/login", async (req, res) => {
     });
   }
 });
-=======
-    })
 
-   }
-})
 app.get('/login',async (req,res)=>{
     const alluser = await User.find();
     res.json({
@@ -73,7 +69,7 @@ app.get('/login',async (req,res)=>{
       message: "feached all user"
     })
   })
->>>>>>> ce5a6e2898a7a9179245c87950d324d89f1c003a
+
 const PORT = process.env.PORT || 5000;
 
 const connectDB = async () => {

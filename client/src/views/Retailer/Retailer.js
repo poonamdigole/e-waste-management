@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 function Retailers() {
   const Buynow=  ()=>{
     {
-        alert('Your Order will be Place successfully');
+        alert('Your Order will be Place successfully🎉🎇');
         return;
     }}
   return (
