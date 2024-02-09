@@ -1,67 +1,67 @@
 import express from "express";
 import mongoose from "mongoose";
-import dotenv from "dotenv"
+import dotenv from "dotenv";
 dotenv.config();
 const app = express();
 app.use(express.json());
-import User from './models/user.js'
+import User from "./models/user.js";
 
-app.post('/signup', async (req, res) => {
+app.post("/signup", async (req, res) => {
+  const { name, email, mobile, address, password, roll } = req.body;
 
-    const { name, email, mobile, address, password, roll } = req.body
-  
-    const newUser = new User({
-        name, email, mobile, address, password, roll
-    })
-  
-  
-  
-    try {
-        const saveUser = await newUser.save()
-        return res.json({
-            data: saveUser,
-            success: true,
-            message: "successfully created signup"
-        })
-    }
-    catch (e) {
-        return res.json(
-            {
-                message: (e.message)
-            }
-        )
-    }
-  })
-  app.get('/signup',async (req,res)=>{
-    const alluser = await User.find();
-    res.json({
-      data:alluser,
-      message: "feached all user"
-    })
-  })
-// Login 
-app.post('/login',async(req,res)=>{
+  const newUser = new User({
+    name,
+    email,
+    mobile,
+    address,
+    password,
+    roll,
+  });
 
-    const{  email,password}=req.body;
-    
-
-    const loginUser = await User.findOne({email:email ,password:password}).select('name gmail roll address')
-
-
-    if(loginUser){
-        return res.json({
-            success:true,
-            data:loginUser,
-            message:"login successfully"
-
-        })
-    }
-   else{
+  try {
+    const saveUser = await newUser.save();
     return res.json({
-        success:false,
-        data:loginUser,
+      data: saveUser,
+      success: true,
+      message: "successfully created signup",
+    });
+  } catch (e) {
+    return res.json({
+      message: e.message,
+    });
+  }
+});
+app.get("/signup", async (req, res) => {
+  const alluser = await User.find();
+  res.json({
+    data: alluser,
+    message: "feached all user",
+  });
+});
+// Login
+app.post("/login", async (req, res) => {
+  const { email, password } = req.body;
 
+  const loginUser = await User.findOne({
+    email: email,
+    password: password,
+  }).select("name gmail roll address");
 
+<<<<<<< HEAD
+  if (loginUser) {
+    return res.json({
+      success: true,
+      data: loginUser,
+      message: "login successfully",
+    });
+  } else {
+    return res.json({
+      success: false,
+      data: loginUser,
+    });
+  }
+});
+=======
     })
 
    }
@@ -73,14 +73,14 @@ app.get('/login',async (req,res)=>{
       message: "feached all user"
     })
   })
+>>>>>>> ce5a6e2898a7a9179245c87950d324d89f1c003a
 const PORT = process.env.PORT || 5000;
 
 const connectDB = async () => {
   const conn = mongoose.connect(process.env.MONGODB_URI);
-  if (conn)
-    console.log('mongoDB connect succesfully')
+  if (conn) console.log("mongoDB connect succesfully");
 };
 app.listen(PORT, () => {
-  console.log(`server is running on ; ${PORT}`)
+  console.log(`server is running on ; ${PORT}`);
   connectDB();
-})
+});

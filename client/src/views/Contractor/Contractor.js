@@ -3,10 +3,11 @@ import './Contractor.css';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import profilePic from "./Images/profile.png";
+import { Link } from 'react-router-dom';
 
 function Contractor() {
   return (
-    <div>
+ 
         <>
         <Navbar />
         <div className='container'>
@@ -14,30 +15,55 @@ function Contractor() {
           <img src={profilePic} className="product-image" alt="Profile" /> 
           <h3 className='contractor-name'>Ram Patil</h3>
           <p className='area-name'>Hadpsar Lene No:3</p>
-          <p className='Mobile'>9567564312</p>
-          <button className='contact-now'>Conatct Now</button>
+          <p>  <a href='tel' className='text-none' >📞 45415121512</a></p>
+          <button className='contact-now'><Link to="/contactcard" className='text-none'>Send Us Message</Link></button>
         </div>
 
         <div className="contractor-card">
           <img src={profilePic} className="product-image" alt="Profile" /> 
           <h3 className='contractor-name'>Shubham Pund</h3>
           <p className='area-name'>Shivaji Nagar</p>
-          <p className='Mobile'>9567567612</p>
-          <button className='contact-now'>Conatct Now</button>
+          <p>  <a href='tel' className='text-none' >📞 45415121512</a></p>
+          <button className='contact-now'><Link to="/contactcard" className='text-none'>Send Us Message</Link></button>
         </div>
 
         <div className="contractor-card">
           <img src={profilePic} className="product-image" alt="Profile" /> 
           <h3 className='contractor-name'>Anand Gund</h3>
           <p className='area-name'>Shewalewadi Nandini Dreams</p>
-          <p className='Mobile'>9567993454</p>
-          <button className='contact-now'>Conatct Now</button>
+          <p>  <a href='tel' className='text-none' >📞 45415121512</a></p>
+          <button className='contact-now'><Link to="/contactcard" className='text-none'>Send Us Message</Link></button>
         </div>
-          
+
+        <div className="contractor-card">
+          <img src={profilePic} className="product-image" alt="Profile" /> 
+          <h3 className='contractor-name'>vivek Patil</h3>
+          <p className='area-name'>pimpri chinchwad</p>
+          <p>  <a href='tel' className='text-none' >📞 45415121512</a></p>
+          <button className='contact-now'><Link to="/contactcard" className='text-none'>Send Us Message</Link></button>
+        </div>
+
+        <div className="contractor-card">
+          <img src={profilePic} className="product-image" alt="Profile" /> 
+          <h3 className='contractor-name'>Poonam Patil</h3>
+          <p className='area-name'>hadpasr It park</p>
+          <p>  <a href='tel' className='text-none' >📞 45415121512</a></p>
+          <button className='contact-now'><Link to="/contactcard"  className='text-none'>Send Us Message</Link></button>
+        </div>
+
+        <div className="contractor-card">
+          <img src={profilePic} className="product-image" alt="Profile" /> 
+          <h3 className='contractor-name'>Dnyaneshwar Patil</h3>
+          <p className='area-name'>Near pune station kali mata chauk </p>
+           <p>  <a href='tel' className='text-none' >📞 45415121512</a></p>
+          <button className='contact-now'><Link to="/contactcard" className='text-none'>Send Us Message</Link> </button>
+        </div>
+                  
         </div>
         <Footer />
+        
         </>
-    </div>
+    
   )
 }
 
