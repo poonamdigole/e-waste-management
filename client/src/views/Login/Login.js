@@ -1,68 +1,78 @@
-import React, {useState, useEffect} from 'react'
-import "./Login.css";
-import { Link } from "react-router-dom"
+import React, {useState,useEffect} from 'react'
+import "./Login.css"
+import "./../Signup/Signup.css"
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar';
-import Footer from '../../components/Footer/Footer';
-
-
 function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email,setEmail]=useState("");
+    const [password,setPassword]=useState("");
+
+const login = async()=>{
+  if (!email){
+    alert("email is required");
+    return;
+  }
+  if (!password){
+    alert("password is required");
+    return
+  }
+  
+  const response = await axios.post("/login",{
+    email:email,
+    password:password
+  })
+  if (response?.data?.success){
+   alert(response?.data?.message);
+   localStorage.setItem("user", JSON.stringify(response?.data?.data))
+   
+    window.location.href="/";
+}else{
+    alert(response?.data?.message);
+}
 
 
-  useEffect(()=>{
-    const storageUser = JSON.parse(localStorage.getItem("user") || '{}');
 
-    if(storageUser?.email){
-      alert("You are already logged in!");
-      window.location.href = "/";
-    }
-
-  }, [])
+}
 
   return (
     <div>
-       <Navbar />
-      <form className="login-form">
-        <h1 className='text-center'>Login</h1>
+      <Navbar/>
+      <form className='login-container'>
 
-        <div>
-          <label htmlFor="email">Email</label>
-          <input type="email"
-            placeholder="Enter your email"
-            id="email"
-            className="form-control"
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }} />
-        </div>
+      <h1 className='text-center'>Login </h1>
+      <div>
+        <label htmlFor='email'>Email</label>
+        <input type='text'
+        placeholder='Enter your email'
+        id="email"
+        className='form-control'
+        value={email}
+        onChange={(e)=>{
+            setEmail(e.target.value);
+        }}/>
 
-        <div>
-          <label htmlFor="password">Password</label>
-          <input type="password"
-            placeholder="Enter your password"
-            id="password"
-            className="form-control"
-            value={password}
-            onChange={(e) => {
-              setPassword(e.target.value);
-            }} />
-        </div>
+     </div>
+     <div>
+        <label htmlFor='password'>Password</label>
+        <input type='text'
+        placeholder='Enter your password'
+        id="password"
+        className='form-control'
+        value={password}
+        onChange={(e)=>{
+            setPassword(e.target.value);
+        }}/>
 
-        <button type="button" className="btn login-btn">
-          Login
-        </button>
-
-        <p className="text-right">
-          <Link to="/signup">Create a new account?</Link>
+     </div>
+      <button type='button' className='btn signup-btn' onClick={login}>login</button>
+      <p className='text-right'>
+          <Link to="/signup">Create an account</Link>
         </p>
-
       </form>
-      <Footer />
     </div>
-    
   )
+    
 }
 
 export default Login
