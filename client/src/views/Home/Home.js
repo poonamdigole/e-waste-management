@@ -22,6 +22,7 @@ function Home() {
           <h1 className='service-text'>Our Services</h1>
 
           <div className='container'>
+            
             <div className='feature-card'>
               <img src={manufacture} className="img-manufacturer" alt="manufacturer" />
               <h3 className='title'>Manufacturer</h3>
