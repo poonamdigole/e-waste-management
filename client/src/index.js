@@ -13,6 +13,8 @@ import WasteBin from './views/WasteBin/WasteBin';
 import RecyclingPlant from './views/RecyclingPlant/RecyclingPlant';
 import DataUnit from './views/DataUnit/DataUnit';
 import ContactCard from './views/ContactCard/ContactCard';
+import Buy from './views/Buy/Buy'
+import Orders from './views/Orders/Orders';
  
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -64,7 +66,15 @@ const router = createBrowserRouter([
   {
     path:'/contactcard',
     element:<ContactCard/>
-  }
+  },
+  {
+    path:'/buy',
+    element:<Buy/>
+  },
+  {
+    path:"/orders",
+    element: <Orders/>
+  },
 ])
 
 root.render(<RouterProvider router={router} />);
