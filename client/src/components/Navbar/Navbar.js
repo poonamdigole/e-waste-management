@@ -42,7 +42,7 @@ function Navbar() {
       </div>
       <div>
 
-        <span className='text-light fs-5'>Hello 👋,{user?.name || 'user'}</span>
+        <span className='text-dark fs-5'>Hello 👋,{user?.name || 'user'}</span>
         {/* <div>
       <h1>User ID: {userId}</h1>
     </div> */}

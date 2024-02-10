@@ -5,6 +5,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 import User from "./models/user.js";
+import Order from "./models/order.js"
 import Product from "./models/product.js";
 
 app.post("/signup", async (req, res) => {

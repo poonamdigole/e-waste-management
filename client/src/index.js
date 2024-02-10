@@ -68,7 +68,7 @@ const router = createBrowserRouter([
     element:<ContactCard/>
   },
   {
-    path:'/buy',
+    path:'/Buy/:_id',
     element:<Buy/>
   },
   {

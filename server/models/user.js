@@ -7,7 +7,7 @@ const UserSchema = new Schema({
     },
     email:{
         type:String,
-        unique:true,
+        // unique:true,
         required:true
     },
     password:{
@@ -17,7 +17,7 @@ const UserSchema = new Schema({
     mobile:{
         type:String,
         default:0,
-        unique:true,
+        // unique:true,
         required:true
     },
     address:{
