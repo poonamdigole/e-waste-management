@@ -10,7 +10,7 @@ function Footer() {
         <div className='footer-container'>
 
             <div className='text-footer'>
-                Developed By <a>Vaishnavi Hole</a>
+                Developed By <a>Bharti</a>
             </div>
             <div>
                 <a href='https://github.com/vaishnavihole/balance-sheet' target="_blank">

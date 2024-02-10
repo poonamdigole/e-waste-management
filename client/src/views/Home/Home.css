@@ -1,6 +1,8 @@
 .service-text{
  text-align: center;
+ font-size: 40px;
  border-bottom: double 4px black;
+ padding: 10px;
 }
 
 .container{
