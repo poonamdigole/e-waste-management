@@ -1,9 +1,13 @@
 import {model,Schema} from 'mongoose'
 
 const UserSchema = new Schema({
-    name:{
+    firstname:{
         type:String,
         required:true
+    },
+    lastname:{
+        type:String,
+        
     },
     email:{
         type:String,

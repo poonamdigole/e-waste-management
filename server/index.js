@@ -7,12 +7,14 @@ app.use(express.json());
 import User from "./models/user.js";
 import Order from "./models/order.js"
 import Product from "./models/product.js";
+import Cunsumerp from "./models/cunsumer.js"
 
 app.post("/signup", async (req, res) => {
-  const { name, email, mobile, address, password, roll } = req.body;
+  const { firstname,lastname, email, mobile, address, password, roll } = req.body;
 
   const newUser = new User({
-    name,
+    firstname,
+    lastname,
     email,
     mobile,
     address,
@@ -259,6 +261,32 @@ res.json({
   status:true,
   message:"Order status update successfully///"
 })
+})
+app.post('/cunsumerproducts', async (req, res) => {
+
+  const { name, price,  productImg, quantity } = req.body
+
+  const newProduct = new Cunsumerp({
+      name, price,  productImg, quantity
+  })
+
+
+  try {
+      const savedProduct = await newProduct.save()
+
+      return res.json({
+          data: savedProduct,
+          success: true,
+          message: "product added"
+      })
+  }
+  catch (e) {
+      return res.json(
+          {
+              message: (e.message)
+          }
+      )
+  }
 })
 
 
