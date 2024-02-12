@@ -1,14 +1,16 @@
 import "./RecyclingCard.css"
 import { Link } from "react-router-dom";
 
-export default function Contactpagecard({ name, productImg, price, description }) {
+export default function RecyclingCard({ name, productImg, price, description }) {
+
   const manufacturing = ()=>{
     alert("successfully send product")
     window.location.href="/"
     return
   }
+  
   return (
-    <div className="contact-page-cardcard">
+    <div className="recycling-card">
         
       <p><img  src={productImg} className="img-contact" alt="" /></p>
 

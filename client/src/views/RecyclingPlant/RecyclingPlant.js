@@ -73,13 +73,13 @@ function RecyclingPlant() {
   const [recyclingProducts, setRecyclingProduct] = useState([]);
 
   
-  const loadProducts = async () => {
+  const loadProduct = async () => {
     const response = await axios.get("/api/v1/recyclingproducts");
     setRecyclingProduct(response?.data?.data);
   };
 
   useEffect(() => {
-    loadProducts();
+    loadProduct();
   }, []);
 
 
