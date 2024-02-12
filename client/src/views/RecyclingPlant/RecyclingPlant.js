@@ -59,13 +59,30 @@
 
 // export default RecyclingPlant;
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./RecyclingPlant.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
-import img from "../RecyclingPlant/Recyclingimg/e-waste.webp"
+import axios from "axios";
+import img from "../RecyclingPlant/Recyclingimg/E-Waste-Recycling.jpg";
+import RecyclingCard from "./../../components/RecyclingCard/RecyclingCard.js";
+
+
 
 function RecyclingPlant() {
+  const [recyclingProducts, setRecyclingProduct] = useState([]);
+
+  
+  const loadProducts = async () => {
+    const response = await axios.get("/api/v1/recyclingproducts");
+    setRecyclingProduct(response?.data?.data);
+  };
+
+  useEffect(() => {
+    loadProducts();
+  }, []);
+
+
   return (
     <>
       <Navbar />
@@ -83,6 +100,23 @@ function RecyclingPlant() {
 
        <p> <img src={img} alt="ewasteImg"  className="e-waste-img"/></p>
       </div>
+     <div className="card-container">
+      {
+      recyclingProducts?.map((product, i) => {
+          const { _id, name, price, productImg, description } = product;
+          return (
+            <RecyclingCard
+              key={i}
+              name={name}
+              price={price}
+              productImg={productImg}
+              description={description}
+              _id={_id}
+            />
+          );
+        })
+        }
+        </div>
 
       
       <Footer />

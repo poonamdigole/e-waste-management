@@ -67,7 +67,7 @@ const login = async()=>{
      </div>
       <button type='button' className='btn signup-btn' onClick={login}>login</button>
       <p className='text-right'>
-          <Link to="/signup">Create an account</Link>
+          <Link to="/signup">Create an account ?</Link>
         </p>
       </form>
     </div>

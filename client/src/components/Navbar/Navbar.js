@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import "./Navbar.css";
-<<<<<<< HEAD
 
-=======
 // import axios from 'axios';
->>>>>>> a1cae0f10fcccd0ca2483b36e517fd5575a7952e
+
 import { Link } from "react-router-dom";
 
 function Navbar() {
