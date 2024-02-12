@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import './Buy.css'
+import Navbar from './../../components/Navbar/Navbar';
 
 import { useParams } from 'react-router-dom'
 
@@ -65,6 +66,7 @@ const Buy = () => {
 
 
     return (
+        <div><Navbar/>
         <div className='container buyDetails-main-container mt-5'>
 
             <div className='buy-details-container'>
@@ -126,6 +128,7 @@ const Buy = () => {
 
             </div>
 
+        </div>
         </div>
     )
 }
