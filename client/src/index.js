@@ -15,6 +15,8 @@ import DataUnit from './views/DataUnit/DataUnit';
 import ContactCard from './views/ContactCard/ContactCard';
 import Buy from './views/Buy/Buy'
 import Orders from './views/Orders/Orders';
+import CertificateGenerator from './views/CertificateGenerator/CertificateGenerator';
+import Certificate from './views/Certificate/Certificate';
  
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -75,6 +77,14 @@ const router = createBrowserRouter([
     path:"/orders",
     element: <Orders/>
   },
+  {
+    path:"/certificategenerator",
+    element:<CertificateGenerator/>
+  },
+  {
+    path:"/certificate",
+    element:<Certificate/>
+  }
 ])
 
 root.render(<RouterProvider router={router} />);

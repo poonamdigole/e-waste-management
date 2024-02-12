@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import './ProductCard.css'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import './ProductCard.css';
+import { Link } from 'react-router-dom';
 
 
 const ProductCard = ({ _id, name, price, productImg, description }) => {
+  
 const [user, setUser] = useState();
 
 const loadUser = ()=>{
@@ -13,6 +14,7 @@ const loadUser = ()=>{
  useEffect(()=>{
   loadUser();
  },[])
+
   return (
         
     <div>

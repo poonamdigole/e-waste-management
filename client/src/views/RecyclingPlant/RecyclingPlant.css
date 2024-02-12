@@ -37,6 +37,18 @@
     color: #007bff;
     text-decoration: none;
   }
-  
-  
+  .heading-text{
+    padding: 0 300px;
+  }
+  .e-waste-img{
+    margin-left: 300px;
+    width: 900px;
+    height: 450px;
+  }
+  .card-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 150px;
+  }
   
