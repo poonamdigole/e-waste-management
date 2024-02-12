@@ -5,14 +5,14 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 import User from "./models/user.js";
-import Order from "./models/order.js"
+import Order from "./models/order.js";
 import Product from "./models/product.js";
 
-import Cunsumerp from "./models/cunsumer.js"
-
+import Cunsumerp from "./models/cunsumer.js";
 
 app.post("/signup", async (req, res) => {
-  const { firstname,lastname, email, mobile, address, password, roll } = req.body;
+  const { firstname, lastname, email, mobile, address, password, roll } =
+    req.body;
 
   const newUser = new User({
     firstname,
@@ -254,7 +254,6 @@ app.patch("/orders/status/:id", async (req, res) => {
 
   await Order.updateOne({ _id: id }, { $set: { status: status } });
 
-
   res.json({
     status: true,
     message: "Order status update successfully///",
@@ -262,7 +261,6 @@ app.patch("/orders/status/:id", async (req, res) => {
 });
 
 app.post("/api/v1/recyclingproducts", async (req, res) => {
-
   const { name, price, productImg, description } = req.body;
 
   const newProduct = new Product({
@@ -296,52 +294,39 @@ app.get("/api/v1/recyclingproducts", async (req, res) => {
     message: "all fetched successfuly",
   });
 });
-res.json({
-  status:true,
-  message:"Order status update successfully///"
-})
 
-app.post('/cunsumerproducts', async (req, res) => {
 
-  const { name, price,  productImg, quantity } = req.body
+app.post("/cunsumerproducts", async (req, res) => {
+  const { name, price, productImg, quantity } = req.body;
 
   const newProduct = new Cunsumerp({
-      name, price,  productImg, quantity
-  })
-
+    name,
+    price,
+    productImg,
+    quantity,
+  });
 
   try {
-      const savedProduct = await newProduct.save()
+    const savedProduct = await newProduct.save();
 
-      return res.json({
-          data: savedProduct,
-          success: true,
-          message: "product added"
-      })
+    return res.json({
+      data: savedProduct,
+      success: true,
+      message: "product added",
+    });
+  } catch (e) {
+    return res.json({
+      message: e.message,
+    });
   }
-  catch (e) {
-      return res.json(
-          {
-              message: (e.message)
-          }
-      )
-  }
-})
-
-
-
+});
 
 app.post("/api/v1/certificates", async (req, res) => {
-  const {
-    name,
-    dateOfStart,
-    dateOfEnd,
-    signature,
-    signatureDetails,
-  } = req.body;
+  const { name, dateOfStart, dateOfEnd, signature, signatureDetails } =
+    req.body;
 
   const certificate = new Certificate({
-     name,
+    name,
     dateOfStart,
     dateOfEnd,
     signature,
@@ -381,13 +366,11 @@ app.get("/api/v1/certificates", async (req, res) => {
   }
 });
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "..", "client", "build")));
 
-
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
-
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'))
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "..", "client", "build", "index.html"));
   });
 }
 
