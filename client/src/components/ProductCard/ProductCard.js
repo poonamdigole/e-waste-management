@@ -25,8 +25,7 @@ const loadUser = ()=>{
         <p className='product-description'>{description}</p>
         <p className='product-price'> ₹ {price} /-</p>
 
-        {
-          user ?  <Link className='button buy-now-btn '
+       <Link className='button buy-now-btn '
 
           onClick={() => {
             window.location.href = `/buy/${_id}`
@@ -35,16 +34,11 @@ const loadUser = ()=>{
 
         >Buy now</Link>
         
-        : <Link className='button buy-now-btn '
-
-        onClick={() => {
-          window.location.href = `/login`
-        }}
+       
 
 
-      >login to Buy</Link>
-
-        }
+      
+        
 
       </div>
     </div>
