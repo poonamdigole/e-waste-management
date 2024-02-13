@@ -103,14 +103,15 @@ function RecyclingPlant() {
      <div className="card-container">
       {
       recyclingProducts?.map((product, i) => {
-          const { _id, name, price, productImg, description } = product;
+          const { _id, name, recyclingproductprice, recyclingproductimg, recyclingproductDescription,recyclingproductquantity } = product;
           return (
             <RecyclingCard
               key={i}
               name={name}
-              price={price}
-              productImg={productImg}
-              description={description}
+              recyclingproductprice={recyclingproductprice}
+              recyclingproductimg={recyclingproductimg}
+              recyclingproductquantity={recyclingproductquantity}
+              recyclingproductDescription={recyclingproductDescription}
               _id={_id}
             />
           );

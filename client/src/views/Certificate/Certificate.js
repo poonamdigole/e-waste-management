@@ -12,6 +12,11 @@ function Certificate() {
     const storageUse = JSON.parse(localStorage.getItem("user") || '{}');
     setUser(storageUse);
   }, [])
+
+  const download = ()=>{
+    alert("download...")
+    return
+  }
   
   return (
     <>
@@ -45,7 +50,7 @@ function Certificate() {
 
      
       </div>
-      <button type="buttton"  className="download-btn" >Download</button>
+      <button type="buttton" className="download-btn" onClick={download}>Download</button>
     </>
   );
 }

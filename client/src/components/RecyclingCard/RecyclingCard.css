@@ -1,3 +1,11 @@
 .recycling-card{
-    height: 400px;
+    height: fit-content;
+    width: 300px;
+    border-radius: 5px;
+    background-color: white;
+    text-align: center;
+   
+}
+.img-recycling{
+    height: 150px;
 }

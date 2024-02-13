@@ -1,68 +1,75 @@
-import React, { useEffect, useState } from 'react'
+
 import "./Navbar.css";
-
-// import axios from 'axios';
-
 import { Link } from "react-router-dom";
 
-function Navbar() {
+import { useEffect, useState } from "react";
+const Navbar = () => {
   const [user, setUser] = useState({});
-  const [userId, setUserId] = useState(null);
-
 
   useEffect(() => {
-    const storageUse = JSON.parse(localStorage.getItem("user") || '{}');
-    setUser(storageUse);
-  }, [])
-  // useEffect(() => {
-  //   const fetchUserId = async () => {
-  //     try {
-  //       const response = await axios.get('/login'); // Replace '/api/user' with your actual backend endpoint
-  //       setUserId(response.data.data.id);
-  //     } catch (error) {
-  //       console.error('Error fetching user ID:', error);
-  //     }
-  //   };
+    const storedUser = (JSON.parse(localStorage.getItem("user") || "{}"));
+    setUser(storedUser);
+  }, []);
 
-  //   fetchUserId();
-  // }, []);
+  const logout = () => {
+    localStorage.removeItem('user');
+    window.location.href = '/login';
+   
+  }
 
 
   return (
-    <div className="navbar fw-bold">
-      <Link to="/" className="navbar-brand">
-        🗑️E-waste
-      </Link>
+    <div className="position-sticky top-0 navbar-container ">
+      <nav className="navbar navbar-expand-lg p-3 fs-4 nav1 ">
+        <div className="container-fluid">
+          <Link className="navbar-brand text-light logoimg " to="/">
+            <span className="logo"> 🗑️ E-WASTE</span>
+          </Link>
 
-      <div className='navbar-links-container'>
-        <Link to="/login" className="navbar-link fw-bold">
-          Login
-        </Link>
-        <Link to="/signup" className="navbar-link fw-bold">
-          Signup
-        </Link>
-      </div>
-      <div>
+          <button
+            className="navbar-toggler bg-light "
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav ms-lg-auto">
+              <li className="nav-item">
+                <Link
+                  className="nav-link text-dark "
+                  aria-current="page"
+                  to="/"
+                >
+                  Home
+                </Link>
+              </li>
+              <li className="nav-item ">
+                <Link className="nav-link text-dark" to="/mylinks">
+                  customer
+                </Link>
+              </li>
+            </ul>
+          <div className="logout-btn">
+            {
+          user?.name ? <button type='button' className="navbar-logout-btn" onClick={logout}> Logout </button> : <span><Link to='/signup' className="navbar-link"> Signup </Link> <Link to='/login' className="navbar-link">login</Link> </span>
+          }
 
-
-        <span className=' fs-5'>Hello 👋,{user?.name || 'user'}</span>
-       
-
-        {
-          user?.name ? (
-            <span className=' fs-5 ms-3 curser-pointer' onClick={() => {
-
-              localStorage.removeItem('user')
-              window.location.href = '/login'
-            }}> Logout </span>
-
-          ) : null
-        }
-
-
-      </div>
+       hello,{user?.name || "user"}
+       </div>
+          </div>
+        </div>
+        <div>
+         
+          
+         
+        </div>
+      </nav>
     </div>
-  )
-}
-
-export default Navbar
+  );
+};
+export default Navbar;
