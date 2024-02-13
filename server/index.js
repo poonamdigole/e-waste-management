@@ -7,16 +7,17 @@ app.use(express.json());
 import User from "./models/user.js";
 import Order from "./models/order.js";
 import Product from "./models/product.js";
+import Recyclingproduct from "./models/recycling.js";
 
 import Cunsumerp from "./models/cunsumer.js";
 
 app.post("/signup", async (req, res) => {
-  const { firstname, lastname, email, mobile, address, password, roll } =
+  const { firstname,  email, mobile, address, password, roll } =
     req.body;
 
   const newUser = new User({
     firstname,
-    lastname,
+   
     email,
     mobile,
     address,
@@ -261,13 +262,14 @@ app.patch("/orders/status/:id", async (req, res) => {
 });
 
 app.post("/api/v1/recyclingproducts", async (req, res) => {
-  const { name, price, productImg, description } = req.body;
+  const { name, recyclingproductprice, recyclingproductimg, recyclingproductquantity, recyclingproductDescription } = req.body;
 
-  const newProduct = new Product({
+  const newProduct = new Recyclingproduct({
     name,
-    productImg,
-    price,
-    description,
+    recyclingproductimg,
+    recyclingproductprice,
+    recyclingproductquantity,
+    recyclingproductDescription,
   });
 
   try {
@@ -286,7 +288,7 @@ app.post("/api/v1/recyclingproducts", async (req, res) => {
 });
 
 app.get("/api/v1/recyclingproducts", async (req, res) => {
-  const products = await Product.find();
+  const products = await Recyclingproduct.find();
 
   res.json({
     success: true,

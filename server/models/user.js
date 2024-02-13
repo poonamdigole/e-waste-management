@@ -5,10 +5,6 @@ const UserSchema = new Schema({
         type:String,
         required:true
     },
-    lastname:{
-        type:String,
-        
-    },
     email:{
         type:String,
         // unique:true,

@@ -37,7 +37,7 @@ function Signup() {
     }
 
     const response =await axios.post("/signup",{
-            name:name,
+            firstname:name,
             email:email,
             password:password,
             mobile:mobile,
