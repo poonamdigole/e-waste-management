@@ -41,6 +41,7 @@ app.post("/signup", async (req, res) => {
 
 app.get("/signup", async (req, res) => {
   const alluser = await User.find();
+  // console.log(alluser)
   res.json({
     data: alluser,
     message: "feached all user",
